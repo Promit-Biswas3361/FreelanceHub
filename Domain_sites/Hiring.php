@@ -12,6 +12,12 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'client') {
+    echo "<script> alert('Kindly login using client credentials to hire freelancers'); 
+        window.location.href = '../login.php'; </script>";
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['proff_id'])) {
     // Assuming the proff_id is passed from the previous page
     $proff_id = $_POST['proff_id'];
