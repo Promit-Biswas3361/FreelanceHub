@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; // Default username for XAMPP
-$password = ""; // Default password for XAMPP is empty
-$dbname = "freelancehub2"; // Replace with your actual database name
+$username = "root"; 
+$password = ""; 
+$dbname = "freelancehub2"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
