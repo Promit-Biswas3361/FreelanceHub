@@ -1,0 +1,233 @@
+.header{
+    position: sticky;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    font-size: 18px; 
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+
+.header a{
+  width:11.5%;
+}
+
+.header img{
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+}
+
+.search{
+    height: 65px;
+    width: 55% ;
+    border: 2px solid #eb4511 ;
+    border-radius: 10px;
+}
+
+.header .search #cat_list{
+    border-radius: 10px;
+    cursor: pointer;
+    padding-left: 8px; 
+    padding-right: 7px;
+    height: 65px;
+}
+
+.header .search #cat_list:hover, .navbar a:hover{
+    color: #d85d38;
+    opacity: 75%;
+}
+
+.header .search #cat_list::after{
+    content: "|";
+    height: 25px;
+    padding-left: 15px;
+    color: #eb4511;
+    font-size: 40px;
+}
+
+.header .search input{
+    padding-left: 20px; 
+    padding-top: 5px; 
+    width: 66%;
+    height: 55px;
+    border: 0px;
+    outline: none;
+    font-size: 17px;
+}
+
+.search button{
+    height: 50px;
+    width: 10%;
+    background-image: url("C:/Users/Promit Biswas/OneDrive/Desktop/DBS Project/Frontend/my-app/src/assests/images/icon-search.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    font-size: 3px;
+    border: 0px;
+    cursor: pointer;
+    padding-top: 8px;
+}
+
+.navbar a{
+    padding: 15px 10px;
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+}
+
+.dropdown-menu{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 385px;
+  top: 90px;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a{
+  text-decoration: none;
+  padding: 0px 5px;
+  color: rgb(56, 53, 53);
+  margin: 5px;
+}
+
+.dropdown-menu a:hover{
+  color: #d85d38;
+  border-color: #eb4511;
+}
+
+.header .account img{
+  width: 80px;
+  height: auto;
+  padding-right: 20px;
+  border-radius: 50%;
+}
+
+/* ///////////////////////////// */
+.header2{
+    position: sticky;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    height: 32px;
+    font-size: 18px; 
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+.header2 .Choices a{
+    text-decoration: none;
+    padding: 0px 50px;
+    color: rgb(56, 53, 53);
+}
+
+.header2 .Choices a:hover{
+    text-decoration: underline 2px #d85d38;
+}
+
+/* ////////////////////////////////// */
+
+.hello{
+    margin: 10px 28px;
+    font-size: 18px;
+}
+
+.hello h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.hello h4{
+    display: inline;
+    margin-right: 10px;
+} 
+
+.hello h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    color: #eb4511;
+}
+
+.details{
+    margin: 85px 0px;
+}
+
+.details table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 15px 10px;
+}
+
+.details th, td {
+    border: 1px solid black;
+    padding: 10px; 
+}
+
+
+
+/* ///////////////////////////// */
+
+footer {
+    background-color: #ef6a40;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 46px;
+    position: static;
+    bottom: 5px;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .col-md-4 {
+    width: 30%;
+  }
+  
+  .container h3 {
+    color: #fff;
+    font-size: 23px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  .col-md-4 a{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .col-md-4 a:hover{
+    text-decoration: underline;
+  }
+  
+  hr {
+    border-top: 1px solid #fff;
+    margin-top: 20px;
+  }
+  
+  .container p {
+    margin-bottom: 10px;
+  }
+  

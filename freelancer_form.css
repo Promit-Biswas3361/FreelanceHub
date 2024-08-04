@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1{
+    color: rgba(65, 1, 1, 0.907);
+    font-weight: 550;
+  }
+
+  h3{
+    color: rgb(226, 106, 0);
+    font-weight: 550;
+  }
+
+.form_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(8, 90, 120);
+    position: absolute; 
+    top: 20px;
+    right: 183px;
+    margin: 30px;
+    width: 74%;
+}
+
+.form_header{
+    background-color: rgb(214, 213, 213);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.form_header .squares{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.form_header .squares div{
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    top: 9px;
+    margin-left: 10px;
+}
+
+.form_header .rectangles{
+    background-color: white;
+    height: 12px;
+    width: 45%;
+    position: absolute;
+    top: 9px;
+    right: 27.5%;
+    margin-left: 5px;
+}
+
+.form-format{
+    background-color: white;
+    width: 90%;
+    margin: 35px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-format .colors{
+    width: 99.4%;
+    height: 120px;
+    position: relative;
+    top: 1.5px;
+}
+
+.form-format .colors img{
+    z-index: 1;
+    width: 20%;
+    height: auto;
+    position: absolute;
+    right: 40%;
+    top: 4px;
+    border: rgb(175, 175, 175) 3px solid;  
+    border-radius: 47%;
+}
+
+.colors #cream{
+    background: #ffebcdf5;
+    height: 43%;
+}
+
+.colors #dark-yellow{
+    height: 19%;
+    background-color: rgb(240, 136, 0);
+}
+
+.colors #yellow{
+    height: 19%;
+    background-color: rgb(246, 186, 36);
+}
+
+.colors #orange{
+    height: 19%;
+    background-color: rgb(226, 106, 0);
+}
+
+.form-format .fields{
+    margin: 15px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.form-format .fields t{
+    text-align: left;
+    font-size: 18px;
+    color:rgb(226, 106, 0);
+    margin: 0px 46px;
+}
+
+.fields input{
+    padding: 5px;
+    margin-right: 12px;
+    border-radius: 3px; 
+    width: 20%;
+    position: absolute;
+    left: 380px;
+}

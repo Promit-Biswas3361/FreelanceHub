@@ -1,0 +1,179 @@
+.header{
+    position: sticky;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    font-size: 18px; 
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+
+.header a{
+  width:11.5%;
+}
+
+.header img{
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+}
+
+.header .account img{
+  width: 80px;
+  height: auto;
+  padding-right: 20px;
+  border-radius: 50%;
+}
+
+.header2{
+    position: sticky;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    height: 32px;
+    font-size: 18px; 
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+.header2 .Choices a{
+    text-decoration: none;
+    padding: 0px 50px;
+    color: rgb(56, 53, 53);
+}
+
+.header2 .Choices a:hover{
+    text-decoration: underline 2px #d85d38;
+}
+
+footer {
+    background-color: #ef6a40;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: 46px;
+    position: static;
+    bottom: 5px;
+}
+  
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-md-4 {
+    width: 30%;
+}
+
+.container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.container label {
+    font-weight: bold;
+    color: #555;
+}
+
+.container input[type="text"],
+.container select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.container .button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.container .button:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .container {
+    margin: 0 auto;
+}
+
+.footer .container h3 {
+    color: #4CAF50;
+    font-size: 20px;
+}
+
+.footer .container p {
+    font-size: 16px;
+}
+
+.footer .container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer .container ul li {
+    margin-bottom: 10px;
+}
+
+.footer .container hr {
+    border: 0;
+    border-top: 1px solid #555;
+}
+
+@media (max-width: 767px) {
+    .container input[type="text"],
+    .container select,
+    .container textarea {
+        width: 100%;
+    }
+}
