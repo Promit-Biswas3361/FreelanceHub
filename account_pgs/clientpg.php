@@ -148,7 +148,9 @@ $conn->close();
                       <td><?php echo $row['professional_username']; ?></td>
                       <td><?php echo $row['date_of_hiring']; ?></td>
                       <td><?php echo $row['due_date']; ?></td>
-                      <td><?php echo $row['completion_status']; ?></td>
+                      <td class="<?php echo $row['completion_status'] === 'Completed' ? 'yes' : 'no'; ?>">
+                        <?php echo $row['completion_status']; ?>
+                      </td>
                   </tr>
               <?php endforeach; ?>
           </table>
