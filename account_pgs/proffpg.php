@@ -42,11 +42,11 @@ if ($result->num_rows > 0) {
 $stmt->close();
 
 $query ="SELECT h.order_id,(SELECT d.domain_category FROM domain d WHERE h.domain_id = d.domain_id) AS domain_category,(SELECT c.Username FROM clients c WHERE c.client_id = h.client_id) AS client_username,
-  h.date_of_hiring,h.pricing
+  h.date_of_hiring, h.due_date, h.pricing, (SELECT o.completion_status FROM orders o WHERE o.order_id = h.order_id) as completion_status
   FROM 
   hiring h
   WHERE h.proff_id = ?
-  ORDER BY h.order_id ASC"; 
+  ORDER BY h.due_date, h.order_id ASC"; 
 
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $p_id);
@@ -138,7 +138,9 @@ $conn->close();
                 <th>Domain</th>
                 <th>Client</th>
                 <th>Date of Hiring</th>
+                <th>Deadline Date</th>
                 <th>Pricing</th>
+                <th>Status</th>
               </tr>
               <?php foreach ($table_data as $row): ?>
                   <tr>
@@ -146,7 +148,9 @@ $conn->close();
                       <td><?php echo $row['domain_category']; ?></td>
                       <td><?php echo $row['client_username']; ?></td>
                       <td><?php echo $row['date_of_hiring']; ?></td>
+                      <td><?php echo $row['due_date']; ?></td>
                       <td><?php echo $row['pricing']; ?></td>
+                      <td><?php echo $row['completion_status']; ?></td>
                   </tr>
               <?php endforeach; ?>
           </table>

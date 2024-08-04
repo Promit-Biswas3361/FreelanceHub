@@ -26,11 +26,11 @@ $stmt->close();
 $query ="SELECT h.order_id,
   (SELECT d.domain_category FROM domain d WHERE h.domain_id = d.domain_id) AS domain_category,
   (SELECT p.Username FROM professionals p WHERE p.proff_id = h.proff_id) AS professional_username,
-  h.date_of_hiring
+  h.date_of_hiring, h.due_date, (SELECT o.completion_status FROM orders o WHERE o.order_id = h.order_id) as completion_status
   FROM 
   hiring h
   WHERE h.client_id = ?
-  ORDER BY h.order_id ASC"; 
+  ORDER BY h.due_date, h.order_id ASC"; 
 
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $c_id);
@@ -138,6 +138,8 @@ $conn->close();
                 <th>Domain</th>
                 <th>Freelancer</th>
                 <th>Date of Hiring</th>
+                <th>Deadline Date</th>
+                <th>Status</th>
               </tr>
               <?php foreach ($table_data as $row): ?>
                   <tr>
@@ -145,6 +147,8 @@ $conn->close();
                       <td><?php echo $row['domain_category']; ?></td>
                       <td><?php echo $row['professional_username']; ?></td>
                       <td><?php echo $row['date_of_hiring']; ?></td>
+                      <td><?php echo $row['due_date']; ?></td>
+                      <td><?php echo $row['completion_status']; ?></td>
                   </tr>
               <?php endforeach; ?>
           </table>
