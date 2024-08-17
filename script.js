@@ -11,8 +11,23 @@ dropdownText.addEventListener("click", function() {
   }
 });
 
-// Close the dropdown menu if the user clicks outside of it
+var image = document.getElementById("account-icon");
+var settings = document.getElementsByClassName("account-settings")[0];
+
+image.addEventListener("click", function() {
+  if (settings.style.display === "flex") {
+    settings.style.display = "none";
+  } else {
+    settings.style.display = "flex";
+  }
+});
+
 window.onclick = function(event) {
+  if (event.target !== image && !settings.contains(event.target)) {
+    if (settings.style.display === "flex") {
+      settings.style.display = "none";
+    }
+  }
   if (!event.target.matches('#cat_list')) {
     if (dropdownContent.style.display === "flex") {
       dropdownContent.style.display = "none";
@@ -20,3 +35,7 @@ window.onclick = function(event) {
   }
 }
 
+function confirmLogOut(event){
+    var confirmMsg = "Are you sure you want to Logout?";
+    return confirm(confirmMsg);
+}

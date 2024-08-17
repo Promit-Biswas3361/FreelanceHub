@@ -22,10 +22,8 @@
               <button type="submit">.</button>
             </form>
       </div>
-        <div class="account">
-          <a target="_self" href="../PHP Connectivity/account.php">
-            <img src="..\images\account_icon.png"/>
-          </a>
+      <div class="account">
+          <img id="account-icon" src="..\images\account_icon.png"/>
         </div>
       </header>
       <div class="dropdown-menu">
@@ -35,6 +33,10 @@
         <a target="from6" href="digmark.php">Digital Marketing</a>
         <a target="form4" href="ai.php">Artificial Intelligence</a>
         <a target="form2" href="webdev.php">Website Design</a>
+      </div>
+      <div class="account-settings">
+        <a target="_self" href="../PHP Connectivity/account.php">Account</a>
+        <a target="_self" href="../PHP Connectivity/SignOut.php" onclick = "return confirmLogOut(event)">Logout</a>
       </div>
       <!-- Header_2 --><!-- Header_2 --><!-- Header_2 --><!-- Header_2 --><!-- Header_2 --><!-- Header_2 --><!-- Header_2 --><!-- Header_2 -->
       <header2 class="header2">
