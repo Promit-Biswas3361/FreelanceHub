@@ -78,5 +78,21 @@
         </div>
     </div>
     </form>
+    <?php 
+        if (isset($_GET['error']) && $_GET['error'] == 1) {
+            echo "<script>
+              window.onload = function(){
+                alert('Email-id already registered. Kindly login');
+              }
+            </script>";
+        }
+        else if (isset($_GET['error']) && $_GET['error'] == 2){
+          echo "<script>
+            window.onload = function(){
+              alert('Please choose a different Username');
+            }
+          </script>";
+        }
+    ?>
 </body>
 </html>

@@ -9,6 +9,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mobile = $conn->real_escape_string($_POST['mobile']);
     $password = $conn->real_escape_string($_POST['password']);
 
+    //Check existence of email id and username
+    $query1 = "SELECT * FROM clients where email_id = '$email'";
+    $result1 = $conn->query($query1);
+
+    if($result1->num_rows > 0){
+        $conn->close();
+        header("Location: ../signup.php?error=1");
+        exit();
+    }
+
+    $query2 = "SELECT * FROM clients where Username = '$name'";
+    $result2 = $conn->query($query2);
+
+    if($result2->num_rows > 0){
+        $conn->close();
+        header("Location: ../signup.php?error=2");
+        exit();
+    }
+    
     // Insert data into database
     $sql = "INSERT INTO clients (Username, email_id,password,mobile) VALUES ('$name', '$email','$password','$mobile')";
     if ($conn->query($sql) === TRUE) {

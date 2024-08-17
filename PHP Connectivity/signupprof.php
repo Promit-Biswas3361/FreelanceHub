@@ -11,6 +11,25 @@ $work = $conn->real_escape_string($_POST['work']);
 $password = $conn->real_escape_string($_POST['password']);
 $aadhar = $conn->real_escape_string($_POST['aadhar']);
 
+//check for existing email and username
+$query1 = "SELECT * FROM professionals where email_id = '$email'";
+$result1 = $conn->query($query1);
+
+if($result1->num_rows > 0){
+    $conn->close();
+    header("Location: ../freelancer_form.php?error=1");
+    exit();
+}
+
+$query2 = "SELECT * FROM professionals where Username = '$name'";
+$result2 = $conn->query($query2);
+
+if($result2->num_rows > 0){
+    $conn->close();
+    header("Location: ../freelancer_form.php?error=2");
+    exit();
+}
+
 //insert into professionals and professional_skills table
 $sql = "INSERT INTO professionals (Username, email_id,password,location,mobile,availability) VALUES ('$name', '$email','$password','$address','$mobile',3)";
 $a = $conn->query($sql);
