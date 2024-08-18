@@ -123,11 +123,13 @@
     margin: 0px 46px;
 }
 
-.fields input{
+.fields input, textarea{
     padding: 5px;
     margin-right: 12px;
-    border-radius: 3px; 
+    border-radius: 3px;
+    border: 1.8px solid black; 
     width: 20%;
     position: absolute;
     left: 380px;
 }
+

@@ -174,8 +174,10 @@
 
 .flip-card img{
   position: relative;
-  width: 80%;
+  top: 2%;
+  width: 75%;
   height: auto;
+  border-radius: 50%;
 }
 
 

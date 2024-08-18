@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="freelancer_form.css"/>
 </head>
 <body>
-    <form action="PHP Connectivity/signupprof.php" method="post"> 
+    <form action="PHP Connectivity/signupprof.php" method="post" enctype="multipart/form-data"> 
     <div class="form_container">
         <header class="form_header">
             <div class="squares">
@@ -53,6 +53,10 @@
                 <t>Aadhar No.*</t>
                 <input type="tel" required pattern="[0-9]{12}" placeholder="Aadhar No." name="aadhar"/>
             </div>
+            <div class="fields">
+                <t>Upload Image</t>
+                <input type="file" name="photo" accept="image/*"/>
+            </div>
             <h3>PROFESSIONAL INFORMATION</h3>
             <div class="fields">
                 <t>Skills*</t><p></p>
@@ -68,7 +72,8 @@
             </div>
             <div class="fields">
                 <t>Previous Projects</t>
-                <input type="text" placeholder="Describe your work" name="work"/>
+                <!-- <input type="text" placeholder="Describe your work" name="work"/> -->
+                <textarea placeholder = "Describe your work" name="work"></textarea><br><br>
             </div>
             <div class="fields">
                 <t>Password*</t>

@@ -11,6 +11,24 @@ $work = $conn->real_escape_string($_POST['work']);
 $password = $conn->real_escape_string($_POST['password']);
 $aadhar = $conn->real_escape_string($_POST['aadhar']);
 
+//handling the image
+$defaultImagePath = '../images/user_images/default_profile.png'; 
+$uploadDir = '../images/user_images/'; 
+$fileName = basename($_FILES['photo']['name']);
+$fileTmpPath = $_FILES['photo']['tmp_name'];
+$fileError = $_FILES['photo']['error'];
+
+if ($fileError === UPLOAD_ERR_OK) {
+    $destPath = $uploadDir . $name . $fileName;
+    if (!move_uploaded_file($fileTmpPath, $destPath)) {
+        echo "<p>Error moving the file to the destination folder.</p>";
+        $destPath = $defaultImagePath; 
+    }
+} else {
+    echo "<p>File upload error: " . $fileError . "</p>";
+    $destPath = $defaultImagePath; 
+}
+
 //check for existing email and username
 $query1 = "SELECT * FROM professionals where email_id = '$email'";
 $result1 = $conn->query($query1);
@@ -31,7 +49,7 @@ if($result2->num_rows > 0){
 }
 
 //insert into professionals and professional_skills table
-$sql = "INSERT INTO professionals (Username, email_id,password,location,mobile,availability) VALUES ('$name', '$email','$password','$address','$mobile',3)";
+$sql = "INSERT INTO professionals (Username, email_id,password,location,mobile,availability, profile_pic) VALUES ('$name', '$email','$password','$address','$mobile',3, '$destPath')";
 $a = $conn->query($sql);
 
 $sql2 = "INSERT INTO professional_skills (domain_id,proff_id,projects_worked_on,avg_rating) VALUES ((select domain_id from domain where domain_category='$domain'),(select proff_id from professionals where email_id='$email'),'$work',0)";

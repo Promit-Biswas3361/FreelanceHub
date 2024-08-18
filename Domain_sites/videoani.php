@@ -57,7 +57,7 @@
               echo ' <div class="flip-card">
                       <div class="flip-card-inner">
                         <div class="flip-card-front">
-                        <img src="../images/profile.png" alt="profile_pic"/>
+                        <img src=' . $row['profile_pic'] . ' alt="profile_pic"/>
                         <h2>' . $row['Username'] . '</h2>
                           <p>Bio : ' . $row['projects_worked_on'] . '</p>
                           <p>Rating :' . $row['avg_rating'] . '</p>
