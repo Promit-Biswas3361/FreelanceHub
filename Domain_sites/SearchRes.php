@@ -83,7 +83,7 @@
           <div class="row">
             <div class="col-md-4">
               <h3>About Us</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut cupiditate modi sunt excepturi fugit labore.</p>
+              <p>FreelanceHub is your go-to platform for connecting talented freelancers with businesses seeking expertise across various fields. Our mission is to empower creativity and innovation by providing a user-friendly environment for project collaboration and management. Whether you're a freelancer looking to showcase your skills or a company in search of top-tier talent, FreelanceHub is dedicated to fostering meaningful connections and ensuring a secure, reliable experience for all users. Join us and discover endless opportunities to thrive in the freelance economy!</p>
             </div>
             <div class="col-md-4">
               <h3>Links</h3>
