@@ -15,11 +15,15 @@ $aadhar = $conn->real_escape_string($_POST['aadhar']);
 $defaultImagePath = '../images/user_images/default_profile.png'; 
 $uploadDir = '../images/user_images/'; 
 $fileName = basename($_FILES['photo']['name']);
+
+$fileName = str_replace(' ', '_', $fileName);
+$new_name = str_replace(' ', '_', $name);
+
 $fileTmpPath = $_FILES['photo']['tmp_name'];
 $fileError = $_FILES['photo']['error'];
 
 if ($fileError === UPLOAD_ERR_OK) {
-    $destPath = $uploadDir . $name . $fileName;
+    $destPath = $uploadDir . $new_name . $fileName;
     if (!move_uploaded_file($fileTmpPath, $destPath)) {
         echo "<p>Error moving the file to the destination folder.</p>";
         $destPath = $defaultImagePath; 

@@ -63,7 +63,7 @@
                         <div class="flip-card-front">
                         <img src=' . $row['profile_pic'] . ' alt="profile_pic"/>
                         <h2>' . $row['Username'] . '</h2>
-                          <p>Bio : ' . $row['projects_worked_on'] . '</p>
+                          <p class="projects-worked-on">Bio : ' . $row['projects_worked_on'] . '</p>
                           <p>Rating :' . $row['avg_rating'] . '</p>
                         </div>
                         <div class="flip-card-back card ">
