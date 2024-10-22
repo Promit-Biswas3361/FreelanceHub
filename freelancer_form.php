@@ -54,9 +54,13 @@
                 <input type="tel" required pattern="[0-9]{12}" placeholder="Aadhar No." name="aadhar"/>
             </div>
             <div class="fields">
-                <t>Upload Image</t>
-                <input type="file" name="photo" accept="image/*"/>
+                <img id="imagePreview" src="" alt="Image Preview">
             </div>
+            <div class="fields">
+                <t>Upload Image</t>
+                <input id='imageInput' type="file" name="photo" accept="image/*"/>
+            </div>
+            
             <h3>PROFESSIONAL INFORMATION</h3>
             <div class="fields">
                 <t>Skills*</t><p></p>
@@ -99,5 +103,25 @@
           </script>";
         }
     ?>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+
+        imageInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader(); 
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result; 
+                    imagePreview.style.display = 'block'; 
+                }
+                reader.readAsDataURL(file); 
+            } else {
+                imagePreview.style.display = 'none'; 
+            }
+        });
+    </script>
+
 </body>
 </html>
